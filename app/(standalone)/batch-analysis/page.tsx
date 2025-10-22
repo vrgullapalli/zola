@@ -153,8 +153,10 @@ export default function BatchAnalysisPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-muted/20 p-4 md:p-8">
-      <div className="mx-auto max-w-6xl space-y-6">
+    // Full viewport container with fixed positioning to avoid sidebar conflicts
+    <div className="fixed inset-0 overflow-auto bg-gradient-to-b from-background to-muted/20">
+      <div className="min-h-screen p-4 md:p-8">
+        <div className="mx-auto max-w-6xl space-y-6">
         {/* Header Section */}
         <div className="space-y-2 text-center">
           <div className="flex items-center justify-center gap-3">
@@ -459,6 +461,7 @@ export default function BatchAnalysisPage() {
             ))}
           </div>
         )}
+        </div>
       </div>
     </div>
   );
